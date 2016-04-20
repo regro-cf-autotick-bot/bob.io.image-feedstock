@@ -29,8 +29,7 @@ requirements:
   - jpeg 9*
   - libtiff 4.0.*
   - pkg-config
-  - isl 0.12.2  # [linux]
-  - gcc         # [linux]
+  - gcc     # [linux]
 
   run:
   - python
