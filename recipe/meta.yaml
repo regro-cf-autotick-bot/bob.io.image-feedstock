@@ -8,9 +8,11 @@ source:
   fn: bob.io.image-{{ version }}.zip
   md5: 88a913c53e13606accbed472197a1e19
   url: https://pypi.python.org/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
+  patches:
+    - jpeg9.patch  # this patch is applied for versions > 2.0.5
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   script: python -B setup.py install --single-version-externally-managed --record record.txt
 
@@ -23,9 +25,9 @@ requirements:
   - bob.core
   - bob.io.base
   - giflib
-  - libpng
-  - jpeg
-  - libtiff
+  - libpng 1.6*
+  - jpeg 9*
+  - libtiff 4.0.*
   - pkg-config
   - gcc     # [linux]
 
@@ -36,9 +38,9 @@ requirements:
   - bob.core
   - bob.io.base
   - giflib
-  - libpng
-  - jpeg
-  - libtiff
+  - libpng 1.6*
+  - jpeg 9*
+  - libtiff 4.0.*
   - libgcc  # [linux]
 
 test:
