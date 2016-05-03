@@ -1,4 +1,4 @@
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: bob.io.image
@@ -6,13 +6,11 @@ package:
 
 source:
   fn: bob.io.image-{{ version }}.zip
-  md5: 88a913c53e13606accbed472197a1e19
-  url: https://pypi.python.org/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
-  patches:
-    - jpeg9.patch  # this patch is applied for versions > 2.0.5
+  md5: afb398bc1d5737bfed455a301aeb565f
+  url: https://pypi.io/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not linux]
   script: python -B setup.py install --single-version-externally-managed --record record.txt
 
