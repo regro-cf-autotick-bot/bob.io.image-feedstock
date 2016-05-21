@@ -10,7 +10,7 @@ source:
   url: https://pypi.io/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
 
 build:
-  number: 0
+  number: 2
   skip: true  # [win]
 
 requirements:
@@ -25,6 +25,7 @@ requirements:
   - libpng 1.6*
   - jpeg 9*
   - libtiff 4.0.*
+  - boost 1.60.*
   - pkg-config
 
   run:
@@ -37,6 +38,7 @@ requirements:
   - libpng 1.6*
   - jpeg 9*
   - libtiff 4.0.*
+  - boost 1.60.*
 
 test:
   commands:
