@@ -1,4 +1,6 @@
 {% set version = "2.0.6" %}
+{% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
+{% set build_number = "3" %}
 
 package:
   name: bob.io.image
@@ -10,7 +12,8 @@ source:
   url: https://pypi.io/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
 
 build:
-  number: 2
+  number: {{ build_number }}
+  string: py{{ environ.get('CONDA_PY', '') }}_jpeg{{ jpeg_version }}_{{ build_number }}
   skip: true  # [win]
 
 requirements:
@@ -23,7 +26,7 @@ requirements:
   - bob.io.base
   - giflib
   - libpng 1.6*
-  - jpeg 9*
+  - jpeg {{ jpeg_version }}*
   - libtiff 4.0.*
   - boost 1.60.*
   - pkg-config
@@ -36,7 +39,7 @@ requirements:
   - bob.io.base
   - giflib
   - libpng 1.6*
-  - jpeg 9*
+  - jpeg {{ jpeg_version }}*
   - libtiff 4.0.*
   - boost 1.60.*
 
