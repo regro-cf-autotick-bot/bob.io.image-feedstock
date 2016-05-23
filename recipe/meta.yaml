@@ -1,6 +1,6 @@
 {% set version = "2.0.6" %}
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
-{% set build_number = "3" %}
+{% set build_number = "4" %}
 
 package:
   name: bob.io.image
@@ -25,7 +25,7 @@ requirements:
   - bob.core
   - bob.io.base
   - giflib
-  - libpng 1.6*
+  - libpng 1.6.21*
   - jpeg {{ jpeg_version }}*
   - libtiff 4.0.*
   - boost 1.60.*
@@ -38,7 +38,7 @@ requirements:
   - bob.core
   - bob.io.base
   - giflib
-  - libpng 1.6*
+  - libpng 1.6.21*
   - jpeg {{ jpeg_version }}*
   - libtiff 4.0.*
   - boost 1.60.*
