@@ -1,4 +1,4 @@
-{% set version = "2.0.6" %}
+{% set version = "2.1.0" %}
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
 {% set libpng_version = os.environ.get('LIBPNG_VERSION', '>=1.6.21,<1.7')|string %}
 {% set libpng_string = libpng_version.split(',')[0].split('=')[-1].replace('"', '') %}
@@ -10,7 +10,7 @@ package:
 
 source:
   fn: bob.io.image-{{ version }}.zip
-  md5: afb398bc1d5737bfed455a301aeb565f
+  md5: d917a7b780a62c201032720f6ca7e6fd
   url: https://pypi.io/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
 
 build:
