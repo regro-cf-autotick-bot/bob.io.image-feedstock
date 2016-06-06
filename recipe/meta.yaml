@@ -25,7 +25,7 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - bob.io.base
+  - bob.io.base >=2.0.9
   - giflib
   - libpng {{ libpng_version }}
   - jpeg {{ jpeg_version }}*
@@ -39,7 +39,7 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - bob.io.base
+  - bob.io.base >=2.0.9
   - giflib
   - libpng {{ libpng_version }}
   - jpeg {{ jpeg_version }}*
