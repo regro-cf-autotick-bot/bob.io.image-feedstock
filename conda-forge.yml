@@ -1,6 +1,8 @@
 matrix:
-  - [[JPEG_VERSION, 8]]
-  - [[JPEG_VERSION, 9]]
+  # default channel anaconda 4 requirements
+  - [[JPEG_VERSION, 8], [LIBPNG_VERSION, '"1.6.17"']]
+  # conda-forge channel requirements.
+  - [[JPEG_VERSION, 9], [LIBPNG_VERSION, '">=1.6.21,<1.7"']]
 travis:
   secure:
     BINSTAR_TOKEN: YLmPJURQx1YjaUFhkfqDOOhL4s1cVPlSNvZ5P+BEQJSeshEfI9O1rAatKa5GJEki/qFUe5btO/mwryYohVhKp2JyqRRaQZUY/QP8ZGGZymJihWx1FS/P7JtBOIpI+TDRHGlf74elcBKn1WDgVx3usUYt7bErWpfI1rPhjD1CzUeIy1hFTeRM6vFWprTKhsRplA6rTY/FsYqJ60LIKzOwBDHgOcjmyTeZlqT4MQa9SKOeaqrwhAgWWKFkeLLOV1Uvx6olptJ5B5CftxA7cooKP1su49+33ak8cPhkjsj+otGFxAz+ZPDMl+YxMKCFjbodcGGWJCV597SxqSHChIjwVzI/6L0Ik3VLEK+uYmhYg74DOwYS0o7q9s4/KZPPH4PAFfaWpms5V622r1TOj5adwwAHOsETgnKd0S0ElXzgVj2t1m4SEFjWi6VlNsKW+Pv0SeiLi2QRzh2JOmzZ3iLBYIoqNFMMTNWUj+6jji46xCbqtUZZuzARJ8Rwj5cukoc84VnSWgMLXJyQmLmICnOJsFulGJCfe6nwxcVwqRG14mSVWZUouvqLpA4VUdZLpbC1tTGrI46EDmPkT41rE7BCcEAgtp8AfAK4kXbUuohmFvsOCacOUdg8uEcZNK6Gog7+KWj5vprrxE8CHvJCB63GtzwvgQ4clXImDUM30USWkhw=
