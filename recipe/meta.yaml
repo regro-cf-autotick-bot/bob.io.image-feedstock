@@ -1,6 +1,7 @@
 {% set version = "2.0.6" %}
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
 {% set libpng_version = os.environ.get('LIBPNG_VERSION', '>=1.6.21,<1.7')|string %}
+{% set libpng_string = libpng_version.split(',')[0].split('=')[-1].replace('"', '') %}
 {% set build_number = "5" %}
 
 package:
@@ -14,7 +15,7 @@ source:
 
 build:
   number: {{ build_number }}
-  string: py{{ environ.get('CONDA_PY', '') }}_jpeg{{ jpeg_version }}_libpng{{ libpng_version.split(',')[0].split('=')[-1] }}_{{ build_number }}
+  string: py{{ environ.get('CONDA_PY', '') }}_jpeg{{ jpeg_version }}_libpng{{ libpng_string }}_{{ build_number }}
   skip: true  # [win]
 
 requirements:
