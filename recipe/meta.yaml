@@ -2,7 +2,7 @@
 {% set build_number = "0" %}
 
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
-{% set libpng_version = os.environ.get('LIBPNG_VERSION', '1.6.21')|string %}
+{% set libpng_version = os.environ.get('LIBPNG_VERSION', '1.6.21').replace('"','')|string %}
 {% set build_string = "py{}_jpeg{}_libpng{}_{}".format(environ.get('CONDA_PY', ''), jpeg_version, libpng_version, build_number) %}
 
 package:
