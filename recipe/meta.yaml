@@ -2,9 +2,8 @@
 {% set build_number = "0" %}
 
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
-{% set libpng_version = os.environ.get('LIBPNG_VERSION', '>=1.6.21,<1.7')|string %}
-{% set libpng_string = libpng_version.split(",")[0].split("=")[-1].replace("\"", "") %}
-{% set build_string = "py{}_jpeg{}_libpng{}_{}".format(environ.get('CONDA_PY', ''), jpeg_version, libpng_string, build_number) %}
+{% set libpng_version = os.environ.get('LIBPNG_VERSION', '1.6.21')|string %}
+{% set build_string = "py{}_jpeg{}_libpng{}_{}".format(environ.get('CONDA_PY', ''), jpeg_version, libpng_version, build_number) %}
 
 package:
   name: bob.io.image
