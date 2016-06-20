@@ -1,8 +1,9 @@
-{% set version = "2.0.6" %}
+{% set version = "2.1.1" %}
+{% set build_number = "0" %}
+
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9')|string %}
-{% set libpng_version = os.environ.get('LIBPNG_VERSION', '>=1.6.21,<1.7')|string %}
-{% set libpng_string = libpng_version.split(',')[0].split('=')[-1].replace('"', '') %}
-{% set build_number = "5" %}
+{% set libpng_version = os.environ.get('LIBPNG_VERSION', '1.6.21').replace('"','')|string %}
+{% set build_string = "py{}_jpeg{}_libpng{}_{}".format(environ.get('CONDA_PY', ''), jpeg_version, libpng_version, build_number) %}
 
 package:
   name: bob.io.image
@@ -10,12 +11,12 @@ package:
 
 source:
   fn: bob.io.image-{{ version }}.zip
-  md5: afb398bc1d5737bfed455a301aeb565f
+  md5: 0b43b08ddcf83c0464203b60bcc36ac5
   url: https://pypi.io/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
 
 build:
   number: {{ build_number }}
-  string: py{{ environ.get('CONDA_PY', '') }}_jpeg{{ jpeg_version }}_libpng{{ libpng_string }}_{{ build_number }}
+  string: {{ build_string }}
   skip: true  # [win]
 
 requirements:
@@ -25,12 +26,13 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - bob.io.base
+  - bob.io.base >=2.0.9
   - giflib
   - libpng {{ libpng_version }}
   - jpeg {{ jpeg_version }}*
   - libtiff 4.0.*
-  - boost 1.60.*
+  - boost 1.61.*
+  - cmake
   - pkg-config
 
   run:
@@ -38,12 +40,12 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - bob.io.base
+  - bob.io.base >=2.0.9
   - giflib
   - libpng {{ libpng_version }}
   - jpeg {{ jpeg_version }}*
   - libtiff 4.0.*
-  - boost 1.60.*
+  - boost 1.61.*
 
 test:
   commands:

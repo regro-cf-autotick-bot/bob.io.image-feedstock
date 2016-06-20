@@ -54,7 +54,7 @@ conda info
 
     set -x
     export JPEG_VERSION=9
-    export LIBPNG_VERSION=">=1.6.21,<1.7"
+    export LIBPNG_VERSION="1.6.21"
     export CONDA_PY=27
     set +x
     conda build /recipe_root --quiet || exit 1
@@ -70,7 +70,7 @@ conda info
 
     set -x
     export JPEG_VERSION=9
-    export LIBPNG_VERSION=">=1.6.21,<1.7"
+    export LIBPNG_VERSION="1.6.21"
     export CONDA_PY=34
     set +x
     conda build /recipe_root --quiet || exit 1
@@ -86,7 +86,7 @@ conda info
 
     set -x
     export JPEG_VERSION=9
-    export LIBPNG_VERSION=">=1.6.21,<1.7"
+    export LIBPNG_VERSION="1.6.21"
     export CONDA_PY=35
     set +x
     conda build /recipe_root --quiet || exit 1
