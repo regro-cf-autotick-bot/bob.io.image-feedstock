@@ -13,6 +13,8 @@ source:
   fn: bob.io.image-{{ version }}.zip
   md5: 411e86c424f87bac8a1c53fa924e77d1
   url: https://pypi.io/packages/source/b/bob.io.image/bob.io.image-{{ version }}.zip
+  patches:
+    - test.patch
 
 build:
   number: {{ build_number }}
