@@ -1,7 +1,7 @@
 About bob.io.image
 ==================
 
-Home: http://github.com/bioidiap/bob.io.image
+Home: https://www.idiap.ch/software/bob/
 
 Package license: Modified BSD License (3-clause)
 
@@ -72,7 +72,7 @@ Current build status
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bob.io.image-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bob.io.image-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/bob.io.image-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bob.io.image-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/922e8b413e290a1dc5d012134abc179dd5080153/conda_smithy/feedstock_content/ci_support/disabled.svg)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
 
 Current release info
 ====================
