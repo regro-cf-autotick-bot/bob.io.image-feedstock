@@ -52,7 +52,7 @@ source run_conda_forge_build_setup
 
     set -x
     export JPEG_VERSION=9
-    export LIBPNG_VERSION="1.6.23"
+    export LIBPNG_VERSION="1.6.24"
     export CONDA_PY=27
     set +x
     conda build /recipe_root --quiet || exit 1
@@ -68,7 +68,7 @@ source run_conda_forge_build_setup
 
     set -x
     export JPEG_VERSION=9
-    export LIBPNG_VERSION="1.6.23"
+    export LIBPNG_VERSION="1.6.24"
     export CONDA_PY=34
     set +x
     conda build /recipe_root --quiet || exit 1
@@ -84,7 +84,7 @@ source run_conda_forge_build_setup
 
     set -x
     export JPEG_VERSION=9
-    export LIBPNG_VERSION="1.6.23"
+    export LIBPNG_VERSION="1.6.24"
     export CONDA_PY=35
     set +x
     conda build /recipe_root --quiet || exit 1
