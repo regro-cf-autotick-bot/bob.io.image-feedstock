@@ -27,6 +27,7 @@ requirements:
   - bob.blitz
   - bob.core
   - bob.io.base >=2.0.9
+  - matplotlib
   - giflib
   - libpng {{ libpng_version }}
   - jpeg {{ jpeg_version }}*
@@ -34,7 +35,6 @@ requirements:
   - boost 1.61.*
   - cmake
   - pkg-config
-  - toolchain
 
   run:
   - python
@@ -42,6 +42,7 @@ requirements:
   - bob.blitz
   - bob.core
   - bob.io.base >=2.0.9
+  - matplotlib
   - giflib
   - libpng {{ libpng_version }}
   - jpeg {{ jpeg_version }}*
