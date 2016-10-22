@@ -35,6 +35,7 @@ requirements:
   - boost 1.61.*
   - cmake
   - pkg-config
+  - toolchain
 
   run:
   - python
