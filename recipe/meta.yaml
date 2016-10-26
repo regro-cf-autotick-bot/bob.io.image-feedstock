@@ -22,6 +22,7 @@ build:
 requirements:
   build:
   - python
+  - toolchain
   - setuptools
   - bob.extension
   - bob.blitz
@@ -35,7 +36,6 @@ requirements:
   - boost 1.61.*
   - cmake
   - pkg-config
-  - toolchain
 
   run:
   - python
