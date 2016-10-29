@@ -29,7 +29,7 @@ requirements:
     - bob.core
     - bob.io.base >=2.0.9
     - matplotlib
-    - giflib
+    - giflib 5.1.*
     - libpng {{ libpng_version }}
     - jpeg {{ jpeg_version }}*
     - libtiff 4.0.*
@@ -44,7 +44,7 @@ requirements:
     - bob.core
     - bob.io.base >=2.0.9
     - matplotlib
-    - giflib
+    - giflib 5.1.*
     - libpng {{ libpng_version }}
     - jpeg {{ jpeg_version }}*
     - libtiff 4.0.*
