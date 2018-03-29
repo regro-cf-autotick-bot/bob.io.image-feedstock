@@ -1,0 +1,56 @@
+version: 2
+
+jobs:
+  build__JPEG_VERSION_8__LIBPNG_VERSION_"1.6.22":
+    working_directory: ~/test
+    machine: true
+    environment:
+      - JPEG_VERSION: "8"
+      - LIBPNG_VERSION: ""1.6.22""
+    steps:
+      - checkout
+      - run:
+          name: Fast finish outdated PRs and merge PRs
+          command: |
+            ./ci_support/fast_finish_ci_pr_build.sh
+            ./ci_support/checkout_merge_commit.sh
+      - run:
+          command: docker pull condaforge/linux-anvil
+      - run:
+          name: Print conda-build environment variables
+          command: |
+            echo "JPEG_VERSION=${JPEG_VERSION}"
+            echo "LIBPNG_VERSION=${LIBPNG_VERSION}"
+      - run:
+          # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
+          command: ./ci_support/run_docker_build.sh
+  build__JPEG_VERSION_9__LIBPNG_VERSION_"1.6.26":
+    working_directory: ~/test
+    machine: true
+    environment:
+      - JPEG_VERSION: "9"
+      - LIBPNG_VERSION: ""1.6.26""
+    steps:
+      - checkout
+      - run:
+          name: Fast finish outdated PRs and merge PRs
+          command: |
+            ./ci_support/fast_finish_ci_pr_build.sh
+            ./ci_support/checkout_merge_commit.sh
+      - run:
+          command: docker pull condaforge/linux-anvil
+      - run:
+          name: Print conda-build environment variables
+          command: |
+            echo "JPEG_VERSION=${JPEG_VERSION}"
+            echo "LIBPNG_VERSION=${LIBPNG_VERSION}"
+      - run:
+          # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
+          command: ./ci_support/run_docker_build.sh
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build__JPEG_VERSION_8__LIBPNG_VERSION_"1.6.22"
+      - build__JPEG_VERSION_9__LIBPNG_VERSION_"1.6.26"
